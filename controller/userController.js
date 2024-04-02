@@ -17,8 +17,6 @@ exports.postSignin = expressAsyncHandler(async (req, res) => {
         email: user.email,
         bio: user.bio,
         gender: user.gender,
-        following: user.following,
-        follower: user.follower,
         token: generateToken(user),
       });
       return;
@@ -70,8 +68,6 @@ exports.postRegister = expressAsyncHandler(async (req, res) => {
         email: user.email,
         bio: user.bio,
         gender: user.gender,
-        following: user.following,
-        follower: user.follower,
         token: generateToken(user),
       });
     })
